@@ -1,0 +1,23 @@
+﻿     Register Kayıt Ol için
+
+    NOT1:Neden AppUser.cs veya AppRole.cs sınıflarını eklemek Istedık??
+    // Aslında IdentityDbContext kütüphanesinin içindeki 
+    // AspNetUser tablosuda Hazır alanlar (Id,Username,Email,) var  ama 
+    // Register(Kayıt Ol) için extradan alanlar (Name,Surname,Gender) eklemek istedik
+    // Bu yuzden 
+    // EntityLayer katmanına AppUser.cs ve AppRole.cs Sınıfların ekledik
+
+    NOT2: AspNet Core5.0 da
+     // AspNetUsers Tablosunda Kullanıcı kaydederken Id Neden Otomatık artan değil ??
+    Cozum:
+    // add-migration Yaptıktan sonra
+    // AspNetUsers Tablosunda  eger Id nvarchar50 türünde ise
+    // 1. iş yapmanız gereken  
+    // Id = table.Column<int>(type: "int", nullable: false).Annotation("SqlServer:Identity", "1, 1"),
+    // 2.iş AspNetUsersClaims Tablosunda da 
+    // UserId = table.Column<int>(type: "int", nullable: true),
+    // sonra Tum ılıskılı tabloların bu sekılde duzeltılıp 
+    // SONUNDA 
+    // Update-database  yapmak
+
+     NOT3: AspNet Core6.0 da Boyle bir sorun olmayabılır ??

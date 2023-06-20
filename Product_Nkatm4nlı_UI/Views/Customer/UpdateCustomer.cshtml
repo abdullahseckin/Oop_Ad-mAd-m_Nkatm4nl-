@@ -1,0 +1,34 @@
+﻿
+@model EntityLayer.Concrete.Customer
+@{
+    ViewData["Title"] = "UpdateCustomer";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+<h1>UpdateCustomer</h1>
+
+<form method="post">
+
+    @Html.Label("Musteri ID")
+    @Html.TextBoxFor(x=>x.Id ,new{@class="form-control"})
+    @Html.ValidationMessageFor(x=>x.Id)
+    <br />
+    @Html.Label("Nusteri Adi")
+    @Html.TextBoxFor(x=>x.Name ,new{@class="form-control"})
+    @Html.ValidationMessageFor(x=>x.Name)
+    <br />
+
+    @Html.Label("Musteri Sehri")
+    @Html.TextBoxFor(x=>x.City,new{@class="form-control"})
+    @Html.ValidationMessageFor(x=>x.City)
+    <br />
+    @* DropDownList View deki Kullanımı*@
+    @Html.Label("Meslek Seçiniz")
+    @Html.DropDownListFor(x=>x.JobID,(List<SelectListItem>)ViewBag.v,new{@class="form-control"})
+
+    <br />
+   
+    <button class="btn btn-info">Musteri Güncelle</button>
+
+
+</form>

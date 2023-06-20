@@ -1,0 +1,20 @@
+﻿
+OOP_Temelleri_NKatm4nlı_Proje
+1-->
+
+
+NOT:Kalan işlemler
+Arama işlemi
+Üyelık sistemi
+İdentity
+YArdım Popup
+footer
+Cıkıs yap
+Giriş Yap
+Yeni Üye kaydı
+Admin-->AspNet User
+Publish
+Projenin Canlıya Tasınması
+
+NOT:
+https://fontawesome.com/v4/icons/
